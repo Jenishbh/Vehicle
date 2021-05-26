@@ -1,1 +1,1 @@
-from . data import databse
+from .data import databse

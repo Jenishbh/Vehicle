@@ -1,5 +1,5 @@
 
-from data import *
+from data.databse import database
 
 
 
