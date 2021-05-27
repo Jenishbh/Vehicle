@@ -24,20 +24,15 @@ class database():
         total= price + labour
         add=("insert into databas (part_id, part_name, part_price, labour_charge, total) values ('"+ str(id)  +"','"+ name  +"','"+ str(price)  +"','"+ str(labour)  +"','"+ str(total)  +"')")
         mycursor.execute(add)
-        mydb.commit()
 
-    def search_part(self):
 
-        id=int(input("Please Enter part ID: "))
-        find=("select part_id, part_name, total from database where part_id = '"+ str(id)  +"'")
-        mycursor.execute(find)
-        a=pd.read_sql(find,mydb)
-        print(a)
+
+
 
 
 def main():
     s=database()
-    s.add_part()
+    s.search_part()
 
 main()
 

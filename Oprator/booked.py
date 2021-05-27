@@ -72,7 +72,7 @@ class booked():
         print(a)
         
     def emoplyee_list(self):
-
+        
         find=("SELECT * FROM employee_info where status = 'Active'")
         a=pd.read_sql(find,mydb)
         print(a)
