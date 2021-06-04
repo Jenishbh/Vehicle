@@ -162,6 +162,7 @@ class Login():
                         try:
                             print("You are sucessfull Login")
                             self.lo()==True
+                            return 'successful'
                             break
                         except:
                             print("Please Enter Correct Username and password")
@@ -169,6 +170,7 @@ class Login():
                         print("Please Enter Correct Username and password")
                 else:
                         print("Please Enter valid Email And password")
+                        return 'unsuccessful'
     
     
 
@@ -193,13 +195,7 @@ class Login():
 
 
 
-class chk_status():
-    def __init__(self):
-        pass
 
-
-    def chk_status(self):
-        pass
 
 
 
