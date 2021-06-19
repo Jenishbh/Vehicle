@@ -17,7 +17,16 @@ mycursor=mydb.cursor()
 class chk_status():
     def chk(self,id):
         self.id=id
-        f=("select * from status where id=self.id" )
+        f=("select * from status where id='"+ str(id)  +"'" )
         mycursor.execute(f)
-        a=pd.read_sql(f,mydb)
-        print(a)
+        
+        for a in mycursor.fetchall():
+            print (a)
+
+
+
+def main():
+    s=chk_status()
+    s.chk(54720)
+
+main()

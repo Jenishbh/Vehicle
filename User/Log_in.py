@@ -119,8 +119,10 @@ class Signup():
                     mydb.commit()
                 except:
                     print("Invalid Entry")
+                    
                 print("Hurry!\nSuccessfully Created Your Account...\n Your User Id is: "+str(Signup.userid))
             except :
+                
                 print("Unsuccessfully Signup")
                 
     def save(self):
@@ -150,9 +152,10 @@ class Login():
         pass
 
 
-    def lo():
-        return False
+    
     def login(self):
+            i=1
+            s=0
             while True:
                 e=input("Email: ")
                 p=input("Password: ")            
@@ -161,13 +164,19 @@ class Login():
                         auth.sign_in_with_email_and_password(e, p)
                         try:
                             print("You are sucessfull Login")
-                            self.lo()==True
-                            return 'successful'
+                            
                             break
                         except:
-                            print("Please Enter Correct Username and password")
+                            print("Ouch! I'm Sorry it's not your problem it's our server problem we are working on it... ")
                     except:
-                        print("Please Enter Correct Username and password")
+                        if i!=3:
+                            print("Please Enter Correct Username and password")
+                            
+                            i+=1
+                        else:
+                            print("Sorry You are out of your chance please come back for login again")
+                            s=1
+                            break
                 else:
                         print("Please Enter valid Email And password")
                         return 'unsuccessful'
@@ -203,21 +212,6 @@ class Login():
 
 
 
-class Payment():
-    pass
 
 
 
-def main():
-    s1=Signup()
-    s1.signup()
-    #s1.save()
-#
-    #s=Login()
-    #s.login()
-    #s=Booking()
-    #s.book()
-    #s.confirm()
-    
-
-main()
